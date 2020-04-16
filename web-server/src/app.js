@@ -23,21 +23,21 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Anson',
+        name: 'Anson Chung',
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
-        name: 'Anson',
+        name: 'Anson Chung',
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
-        name: 'Anson',
+        name: 'Anson Chung',
     });
 });
 
@@ -49,20 +49,23 @@ app.get('/weather', (req, res) => {
         });
     }
 
-    geocode(req.query.address, (error, { latitude, longitude, location }) => {
-        if (error) {
-            return res.send({ error });
-        }
-        forecast(latitude, longitude, (error, response) => {
+    geocode(
+        req.query.address,
+        (error, { latitude, longitude, location } = {}) => {
             if (error) {
                 return res.send({ error });
             }
-            res.send({
-                forecast: response,
-                location,
+            forecast(latitude, longitude, (error, response) => {
+                if (error) {
+                    return res.send({ error });
+                }
+                res.send({
+                    forecast: response,
+                    location,
+                });
             });
-        });
-    });
+        }
+    );
 });
 
 app.get('/products', (req, res) => {

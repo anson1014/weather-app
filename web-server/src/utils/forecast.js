@@ -12,7 +12,6 @@ const forecast = (latitude, longitude, callback) => {
                 undefined,
                 `It is ${body.current.temperature} degrees. It feels like ${body.current.feelslike} degrees. There is a ${body.current.precip}% chance of rain.`
             );
-            console.log(body);
         }
     });
 };
