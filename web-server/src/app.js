@@ -93,5 +93,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Serving is up on .' + port);
+    console.log('Serving is up on port ' + port);
 });
