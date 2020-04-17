@@ -1,23 +1,23 @@
 {
-  "name": "weather-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node web-server/src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anson1014/weather-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anson1014/weather-app/issues"
-  },
-  "homepage": "https://github.com/anson1014/weather-app#readme",
-  "dependencies": {
-    "request": "^2.88.0"
-  }
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node ./web-server/src/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/anson1014/weather-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/anson1014/weather-app/issues"
+    },
+    "homepage": "https://github.com/anson1014/weather-app#readme",
+    "dependencies": {
+        "request": "^2.88.0"
+    }
 }
