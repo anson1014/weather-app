@@ -18,6 +18,8 @@
     },
     "homepage": "https://github.com/anson1014/weather-app#readme",
     "dependencies": {
-        "request": "^2.88.0"
+        "request": "^2.88.0",
+        "express": "^4.16.4",
+        "hbs": "^4.1.1"
     }
 }
